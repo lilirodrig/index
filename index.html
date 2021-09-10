@@ -132,13 +132,13 @@ hr {
           <form action="/predict" method="POST">
             <textarea name="sequence" placeholder=">sequence ..." 
               style="width: 400px; height: 100px"></textarea><br>
+              <button type="submit" class="signupbtn">Predict!</button>
           </form>
           
   
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Predict!</button>
-
+            
             <hr>
             {% if result %}
                 <h2>Result of Analysis:</h2>

@@ -132,21 +132,16 @@ hr {
           <form action="/predict" method="POST">
             <textarea name="sequence" placeholder=">sequence ..." 
               style="width: 400px; height: 100px"></textarea><br>
-              <button type="submit" class="signupbtn">Predict!</button>
+              <input type="submit" value="submit">
           </form>
-          
-  
-          <div class="clearfix">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            
-            <hr>
-            {% if result %}
-                <h2>Result of Analysis:</h2>
-                <pre>{{result['sequence']}}</pre>
-                Sequence type: {{result['type']}} <br>
-                Protein Location: {{result['location']}} <br>
-                Probability (membrane): {{result['probability']}} <br>
-            {% endif %}
+          <hr>
+          {% if result %}
+              <h2>Result of Analysis:</h2>
+              <pre>{{result['sequence']}}</pre>
+              Sequence type: {{result['type']}} <br>
+              Protein Location: {{result['location']}} <br>
+              Probability (membrane): {{result['probability']}} <br>
+          {% endif %}
           </div>
         </div>
       </form>
